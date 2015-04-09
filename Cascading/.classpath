@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/cascading-core-2.6.3.jar"/>
+	<classpathentry kind="lib" path="lib/cascading-hadoop-2.6.3.jar"/>
+	<classpathentry kind="lib" path="lib/cascading-hadoop2-mr1-2.6.3.jar"/>
+	<classpathentry kind="lib" path="lib/cascading-local-2.6.3.jar"/>
+	<classpathentry kind="lib" path="lib/cascading-xml-2.6.3.jar"/>
+	<classpathentry kind="lib" path="lib/guava-14.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-common-2.6.0.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-mapreduce-client-core-2.6.0.jar"/>
+	<classpathentry kind="lib" path="lib/janino-2.7.5.jar"/>
+	<classpathentry kind="lib" path="lib/jgrapht-jdk1.6-0.8.1.jar"/>
+	<classpathentry kind="lib" path="lib/riffle-0.1-dev.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/tagsoup-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
