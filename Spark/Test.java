@@ -11,28 +11,8 @@ public class Test {
 		final String path = "/Users/luchao/Downloads/amplab/text/tiny/rankings/part";
 		
 		// build a test tree
-		TreeNode root = new TreeNode(1, new Function<HashMap<String, String>, Boolean>() {
-			public Boolean call(HashMap<String, String> h)
-					throws Exception {
-				if (Integer.parseInt(h.get("PageRank")) > 100) {
-					return true;
-				} else {
-					return false;
-				}
-			}
-		});
-		
-		TreeNode pre = new TreeNode(2, new Function<String, HashMap<String, String>>() {
-			public HashMap<String, String> call(String line) throws Exception {
-				String[] str = line.split(",");
-				HashMap<String, String> record = new HashMap<String, String>();
-				for (int i = 0; i < columns.length; i++) {
-					record.put(columns[i], str[i]);
-				}
-				return record;
-			}
-		});
-		
+		TreeNode root = new TreeNode(1);
+		TreeNode pre = new TreeNode(2, columns);
 		root.addParent(pre);
 		TreeNode t = new TreeNode(3, path);
 		pre.addParent(t);

@@ -19,11 +19,11 @@ public class Builder {
 		Pipe pipe = null;
 		if(root.getType() == 1)
 		{
-			pipe = new SparkFilterPipe(root.getFunc());
+			pipe = new SparkFilterPipe();
 		}
 		else if(root.getType() == 2)
 		{
-			pipe = new SparkFormatterPipe(root.getFunc());
+			pipe = new SparkFormatterPipe(root.getColumns());
 		}
 		else if(root.getType() == 3)
 		{

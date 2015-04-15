@@ -1,24 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.spark.api.java.function.Function;
-import org.json.simple.JSONObject;
-
 
 public class TreeNode {
 
 	private List<TreeNode> parents;
 	private int type;
 	private String path;
-	private Function func;
-	private JSONObject description;
-
+	private String[] columns;
 	
-	public TreeNode(int type, Function function)
+	public TreeNode(int type)
 	{
 		this.parents = new ArrayList<TreeNode>();
 		this.type = type;
-		this.func = function;
 	}
 	
 	public TreeNode(int type, String path)
@@ -28,20 +22,27 @@ public class TreeNode {
 		this.path = path;
 	}
 	
+	public String[] getColumns() {
+		return columns;
+	}
+
+	public void setColumns(String[] columns) {
+		this.columns = columns;
+	}
+
+	public TreeNode(int type, String[] columns)
+	{
+		this.parents = new ArrayList<TreeNode>();
+		this.type = type;
+		this.columns = columns;
+	}
+	
 	public String getPath() {
 		return path;
 	}
 
 	public void setPath(String path) {
 		this.path = path;
-	}
-
-	public Function getFunc() {
-		return func;
-	}
-
-	public void setFunc(Function func) {
-		this.func = func;
 	}
 
 	public int getType() {
@@ -61,7 +62,4 @@ public class TreeNode {
 	{
 		this.parents.add(parent);
 	}
-	
-	// serialize
-	// janino expression
 }
