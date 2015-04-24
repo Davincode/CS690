@@ -1,3 +1,3 @@
 SELECT pageURL, pageRank FROM rankings WHERE pageRank > 50
 SELECT SUBSTR(sourceIP, 1, 10), SUM(adRevenue) FROM uservisits GROUP BY SUBSTR(sourceIP, 1, 10)
-SELECT sourceIP, totalRevenue, avgPageRank FROM (SELECT sourceIP, AVG(pageRank) as avgPageRank, SUM(adRevenue) as totalRevenue FROM Rankings AS R, UserVisits AS UV WHERE R.pageURL = UV.destURL AND UV.visitDate BETWEEN cast('1980-01-01' as timestamp) AND cast('1990-01-01' as timestamp) GROUP BY UV.sourceIP) tb ORDER BY totalRevenue DESC LIMIT 1
+SELECT sourceIP, totalRevenue, avgPageRank FROM (SELECT sourceIP, AVG(pageRank) as avgPageRank, SUM(adRevenue) as totalRevenue FROM Rankings AS R, UserVisits AS UV WHERE R.pageURL = UV.destURL AND UV.visitDate BETWEEN Date('1980-01-01') AND Date('1990-01-01') GROUP BY UV.sourceIP) tb ORDER BY totalRevenue DESC LIMIT 1
