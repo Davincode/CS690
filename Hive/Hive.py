@@ -31,10 +31,10 @@ class Hive():
                 		duration = default_timer() - start
                 		print "Duration time is %f" % duration
     	else:
-    		start = default_timer()
-    		cur.execute(self.sql[index])
-    		duration = default_timer() - start
-    		print "Duration time is %f" % duration
+    	    start = default_timer()
+    	    cur.execute(self.sql[index])
+            duration = default_timer() - start
+    	    print "Duration time is %f" % duration
             cur.close()
             conn.close()
 
@@ -46,7 +46,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 2:
 	   hive.run(3)
     else:
-	   command = sys.argv[2].lower()
+       command = sys.argv[2].lower()
        if command == "scan":
 		  hive.run(0)
 	   if command == "aggregation":
